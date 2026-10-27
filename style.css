@@ -1,4 +1,9 @@
 
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #eef4f8;
@@ -6,8 +11,10 @@ body {
     margin: 0;
     padding: 24px;
     line-height: 1.6;
+    overflow-wrap: anywhere;
 }
 
+/* Headings */
 h1 {
     color: #ffffff;
     font-size: 36px;
@@ -24,6 +31,7 @@ p {
     font-size: 16px;
 }
 
+/* Header */
 .site-header {
     background-color: #174a70;
     color: #ffffff;
@@ -34,12 +42,14 @@ p {
     border-radius: 12px;
 }
 
+/* Subtitle */
 .subtitle {
     color: #d9f5ef;
     font-size: 18px;
     margin-bottom: 20px;
 }
 
+/* Flexbox navigation */
 .navigation {
     list-style: none;
     padding: 0;
@@ -65,21 +75,27 @@ p {
     color: #173746;
 }
 
-#welcome,
-#interests,
-#explore {
-    scroll-margin-top: 20px;
+/* Grid layout for portfolio sections */
+main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Portfolio cards */
 .content-card {
     background-color: #ffffff;
     padding: 24px;
-    margin-bottom: 22px;
+    margin: 0;
     border: 2px solid #c5dce7;
     border-left: 6px solid #36b5a0;
     border-radius: 10px;
+    min-width: 0;
 }
 
+/* Footer */
 #page-footer {
     background-color: #174a70;
     color: #ffffff;
@@ -94,9 +110,34 @@ p {
     margin: 0;
 }
 
-@media (max-width: 600px) {
+/* TABLET: two columns at 768px and below */
+@media (max-width: 768px) {
     body {
-        padding: 12px;
+        padding: 16px;
+    }
+
+    main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .site-header {
+        padding: 24px 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .content-card {
+        padding: 20px;
+    }
+}
+
+/* MOBILE: one column at 480px and below */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
     }
 
     .site-header {
@@ -104,14 +145,26 @@ p {
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 26px;
+    }
+
+    main {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
     }
 
     .content-card {
-        padding: 18px;
+        padding: 16px;
     }
 
     .navigation {
         flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navigation a {
+        display: block;
     }
 }
+
+

@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | My Personal Portfolio</title>
+
+    <!-- Link to the separate CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <h1>My Personal Portfolio</h1>
-        <p>Welcome to my website!</p>
+        <p class="subtitle">Welcome to my website!</p>
 
         <nav aria-label="Main navigation">
-            <ul>
+            <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects/Work</a></li>
                 <li><a href="about.html">About/Contact</a></li>
@@ -21,29 +24,31 @@
     </header>
 
     <main>
-        <section>
+        <section id="welcome" class="content-card">
             <h2>Welcome</h2>
             <p>Hello! This is my personal portfolio website.
             It will showcase my interests, skills, projects,
             and experience as I continue learning.</p>
         </section>
 
-        <section>
+        <section id="interests" class="content-card">
             <h2>My Interests</h2>
             <p>I am interested in technology, robotics,
             engineering, and learning how to create websites.</p>
         </section>
 
-        <section>
+        <section id="explore" class="content-card">
             <h2>Explore My Portfolio</h2>
             <p>Visit my projects page to learn about my work
             or my about page to learn more about me.</p>
         </section>
     </main>
 
-    <footer>
+    <footer id="page-footer">
         <p>&copy; 2026 My Personal Portfolio</p>
     </footer>
 </body>
 </html>
+
+
 
